@@ -1,0 +1,19 @@
+---
+source:
+  adapter: postgresql
+  username: icinga
+  host: localhost
+  database: icinga
+
+datawarehouse:
+  adapter: postgresql
+  username: icinga_dw
+  database: icinga_dw
+
+# Warning, ETL uses ActiveRecord migrations to manage its metadata tables.
+# Do not specify same database as datawarehouse
+etl_execution:
+  adapter: sqlite3
+  database: db/etl_execution.sqlite3
+  pool: 5
+  timeout: 5000

@@ -1,0 +1,12 @@
+
+run 'prepare_db.ctl'
+
+run 'prepare_host_dimension.ctl'
+run 'prepare_service_dimension.ctl'
+run 'prepare_hostgroup_dimension.ctl'
+run 'prepare_servicegroup_dimension.ctl'
+
+run 'process_hostgroup_membership.ctl'
+run 'process_servicegroup_membership.ctl'
+
+run 'process_service_perfdata.ctl'
